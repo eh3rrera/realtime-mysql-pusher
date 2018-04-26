@@ -7,7 +7,7 @@ Follow the tutorial here (to be published)
 
 ## Getting Started
 1. Clone or download this repository: `git clone https://github.com/eh3rrera/realtime-mysql-pusher`.
-2. Enable replication in the MySQL config file (usually `/etc/my.cnf` or `C:\ProgramData\MySQL\MySQL Server 5.7\my.ini` adding the following section:
+2. Enable replication in the MySQL config file (usually `/etc/my.cnf` or `C:\ProgramData\MySQL\MySQL Server 5.7\my.ini`) adding the following section:
 ```
 [mysqld]
 server-id = 1
@@ -19,11 +19,13 @@ binlog-format = row
 3. Make sure to give the necessary permissions to the directory where the logs are going to be stored.
 4. Restart the MySQL server.
 5. In the mysql client, execute the command `show master status;` to verify that the replication log is activated. Something like the following should be shown:
+```
 +------------------+----------+--------------+------------------+-------------------+
 | File             | Position | Binlog_Do_DB | Binlog_Ignore_DB | Executed_Gtid_Set |
 +------------------+----------+--------------+------------------+-------------------+
 | mysql-bin.000001 |      001 |              |                  |                   |
 +------------------+----------+--------------+------------------+-------------------+
+```
 6. Create the `products` table:
 ```
 CREATE TABLE products(id int(11) not null auto_increment, name varchar(50) default null, price decimal(6,2), primary key (id));
