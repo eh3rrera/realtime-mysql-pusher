@@ -3,7 +3,7 @@
 Using [mysql-binlog-connector-java
 ](https://github.com/shyiko/mysql-binlog-connector-java), a Java program listens for insert/update/delete statements on a MySQL database reading them from the replication log. These events are parsed and published on a [Pusher channel](https://pusher.com/docs/client_api_guide/client_channels) so a React web application can consume them and show them in realtime.  
 
-Follow the tutorial here (to be published)
+Follow the tutorial [here](https://pusher.com/tutorials/realtime-mysql-java).
 
 ## Getting Started
 1. Clone or download this repository: `git clone https://github.com/eh3rrera/realtime-mysql-pusher`.
